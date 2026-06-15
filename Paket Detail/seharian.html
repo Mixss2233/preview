@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Day Trek | Sumatra Happy Track Tour</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../css/styledetail.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <div class="logo-wrapper">
+                        <img src="/logo/logo.PNG" alt="Logo" class="logo-img">
+                        <div class="logo-text">
+                            <span class="logo-main">Sumatra HappyTrack</span>
+                            <span class="logo-accent">Tour Jungle Trekking</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-menu-wrapper">
+                <ul class="nav-menu">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../paket.html">Paket</a></li>
+                    <li><a href="../index.html#gallery">Gallery</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="../paket.html" class="btn-nav">Book Now</a>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="detail-hero">
+        <div class="detail-hero-content" data-aos="fade-up">
+            <i class="fas fa-sun"></i>
+            <h1>☀️ One-Day Ethical Trek</h1>
+            <p>6–7 Hours Complete Rainforest Experience</p>
+        </div>
+    </section>
+
+    <div class="detail-container">
+        <div class="detail-card" data-aos="fade-up">
+            <h2>🌿 Discover the Untamed Beauty of Gunung Leuser National Park</h2>
+            <p>Step beyond the ordinary and immerse yourself in one of the world's last remaining tropical rainforests. Our Ethical Jungle Trekking experiences are carefully designed for travelers seeking authentic wildlife encounters, breathtaking landscapes, and meaningful adventures while respecting the natural habitat of the critically endangered Sumatran orangutan.</p>
+            <p>Led by experienced local guides, each trek offers a unique opportunity to explore the hidden wonders of Gunung Leuser National Park, a UNESCO-recognized ecosystem renowned for its incredible biodiversity and pristine rainforest.</p>
+        </div>
+
+        <div class="detail-card" data-aos="fade-up">
+            <h2>☀️ One-Day Ethical Trek</h2>
+            <h3>Duration: 6–7 Hours</h3>
+            <p><strong>Perfect For:</strong> Travelers seeking a complete rainforest experience in a single day.</p>
+            <h3>Experience Highlights:</h3>
+            <ul>
+                <li><i class="fas fa-check"></i> Venture deeper into the rainforest.</li>
+                <li><i class="fas fa-check"></i> Search for wild orangutans and other primates.</li>
+                <li><i class="fas fa-check"></i> Discover unique rainforest plants and wildlife.</li>
+                <li><i class="fas fa-check"></i> Enjoy a traditional jungle lunch surrounded by nature.</li>
+                <li><i class="fas fa-check"></i> Learn about local conservation efforts.</li>
+                <li><i class="fas fa-check"></i> Experience an exciting river tubing journey back to the village.</li>
+            </ul>
+            <div class="price-box">
+                <div class="price">IDR 1,350,000 / Person</div>
+                <small>€70 / Person</small>
+            </div>
+        </div>
+
+        <div class="detail-card" data-aos="fade-up">
+            <h2>✅ What's Included</h2>
+            <ul>
+                <li><i class="fas fa-check"></i> Certified Local Jungle Guide</li>
+                <li><i class="fas fa-check"></i> National Park Entry Permit</li>
+                <li><i class="fas fa-check"></i> Fresh Tropical Fruits</li>
+                <li><i class="fas fa-check"></i> Drinking Water Refill</li>
+                <li><i class="fas fa-check"></i> Jungle Lunch</li>
+                <li><i class="fas fa-check"></i> Basic First Aid Equipment</li>
+            </ul>
+        </div>
+
+        <div class="back-home">
+            <a href="../paket.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Kembali ke Daftar Paket
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"><i class="fas fa-mountain"></i><h3>Sumatra <span>HappyTrack</span> Tour</h3><p>Jungle Trekking Expert</p></div>
+                <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="../paket.html">Paket</a></li><li><a href="../transportasi.html">Transportasi</a></li><li><a href="../index.html#contact">Contact</a></li></ul></div>
+                <div class="footer-social"><h4>Follow Us</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Sumatra Happy Track Tour - Jungle Trekking Bukit Lawang</p></div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        const hamburger = document.getElementById('hamburger');
+        const navWrapper = document.querySelector('.nav-menu-wrapper');
+        if (hamburger && navWrapper) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navWrapper.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navWrapper.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

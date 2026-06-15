@@ -1,0 +1,514 @@
+/* Import Comic Neue Font */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700;800&display=swap');
+
+body {
+    font-family: 'Comic Neue', cursive;
+    background: #fefaf5;
+    overflow-x: hidden;
+    color: #2c3e2b;
+}
+
+/* Untuk heading yang sebelumnya pakai Playfair Display, ganti ke Comic Neue juga */
+h1, h2, h3, h4, .section-title h2, .about-text-left h2, .gallery-header h2 {
+    font-family: 'Comic Neue', cursive;
+}
+.paket-hero-modern {
+    background: linear-gradient(135deg, #2c3e2b, #1a2e1a);
+    padding: 160px 0 80px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.paket-hero-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(58, 123, 84, 0.2), transparent);
+}
+
+.hero-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: bounceIcon 2s infinite;
+}
+
+@keyframes bounceIcon {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.paket-hero-modern h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.paket-hero-modern .highlight-green {
+    color: #3a7b54;
+}
+
+.paket-hero-modern p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Container */
+.container-paket {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+/* ============================================
+   DAFTAR HARGA TREKKING - CARD STYLE
+   ============================================ */
+
+.paket-card {
+    background: white;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    margin-bottom: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.paket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(45, 90, 63, 0.15);
+}
+
+.paket-header {
+    background: linear-gradient(135deg, #2d5a3f, #1a4a2a);
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.paket-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.paket-header i {
+    font-size: 2rem;
+    color: white;
+    animation: iconPulse 2s infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.paket-header h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+}
+
+/* Table Styling */
+.table-wrapper-paket {
+    overflow-x: auto;
+    padding: 0;
+}
+
+.paket-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.paket-table th,
+.paket-table td {
+    padding: 18px 20px;
+    text-align: left;
+}
+
+.paket-table th {
+    background: #f8faf5;
+    color: #2d5a3f;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-bottom: 2px solid #e8ede0;
+}
+
+.paket-table td {
+    color: #5a6b5a;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s;
+}
+
+.paket-table tr {
+    transition: all 0.3s;
+    animation: fadeInRow 0.5s ease forwards;
+    opacity: 0;
+}
+
+.paket-table tr:nth-child(1) { animation-delay: 0.05s; }
+.paket-table tr:nth-child(2) { animation-delay: 0.1s; }
+.paket-table tr:nth-child(3) { animation-delay: 0.15s; }
+.paket-table tr:nth-child(4) { animation-delay: 0.2s; }
+.paket-table tr:nth-child(5) { animation-delay: 0.25s; }
+.paket-table tr:nth-child(6) { animation-delay: 0.3s; }
+.paket-table tr:nth-child(7) { animation-delay: 0.35s; }
+.paket-table tr:nth-child(8) { animation-delay: 0.4s; }
+.paket-table tr:nth-child(9) { animation-delay: 0.45s; }
+
+@keyframes fadeInRow {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.paket-table tr:hover td {
+    background: rgba(45, 90, 63, 0.05);
+}
+
+.price-cell {
+    font-weight: 800;
+    color: #2d5a3f;
+    font-size: 1rem;
+    text-align: right;
+}
+
+.highlight-row {
+    background: linear-gradient(90deg, rgba(45, 90, 63, 0.05), rgba(58, 123, 84, 0.08));
+}
+
+/* ============================================
+   INCLUDED & NOT INCLUDED - CARD STYLE
+   ============================================ */
+
+.included-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.included-card,
+.notincluded-card {
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.included-card:hover,
+.notincluded-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(45, 90, 63, 0.12);
+}
+
+.included-icon i {
+    font-size: 3rem;
+    color: #4caf50;
+    margin-bottom: 15px;
+    animation: checkBounce 0.5s ease;
+}
+
+@keyframes checkBounce {
+    0% { transform: scale(0); }
+    80% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.notincluded-icon i {
+    font-size: 3rem;
+    color: #f44336;
+    margin-bottom: 15px;
+}
+
+.included-card h3,
+.notincluded-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2c3e2b;
+}
+
+.included-card ul,
+.notincluded-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.included-card li,
+.notincluded-card li {
+    padding: 8px 0;
+    font-size: 0.9rem;
+    color: #5a6b5a;
+    transition: all 0.3s;
+}
+
+.included-card li:hover,
+.notincluded-card li:hover {
+    transform: translateX(5px);
+}
+
+.included-card li i {
+    color: #4caf50;
+    margin-right: 12px;
+    font-size: 0.9rem;
+}
+
+.notincluded-card li i {
+    color: #f44336;
+    margin-right: 12px;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   BUTUH BANTUAN - SIMPEL
+   ============================================ */
+
+.help-simpel {
+    margin: 40px 0;
+}
+
+.help-simpel-card {
+    background: linear-gradient(135deg, #2d5a3f, #1a3a2a);
+    border-radius: 24px;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    transition: all 0.3s;
+}
+
+.help-simpel-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(45, 90, 63, 0.2);
+}
+
+.help-simpel-icon {
+    width: 55px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulseRing 2s infinite;
+}
+
+@keyframes pulseRing {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+.help-simpel-icon i {
+    font-size: 1.6rem;
+    color: white;
+}
+
+.help-simpel-content {
+    flex: 1;
+}
+
+.help-simpel-content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.help-simpel-content p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.help-simpel-wa {
+    background: #25D366;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.help-simpel-wa:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+    gap: 15px;
+}
+
+/* ============================================
+   BACK HOME BUTTON
+   ============================================ */
+
+.back-home {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: 2px solid #2d5a3f;
+    color: #2d5a3f;
+    padding: 14px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.back-home-btn:hover {
+    background: #2d5a3f;
+    color: white;
+    gap: 15px;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(45, 90, 63, 0.3);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .paket-hero-modern {
+        padding: 130px 0 60px;
+    }
+    
+    .paket-hero-modern h1 {
+        font-size: 1.8rem;
+    }
+    
+    .container-paket {
+        padding: 40px 20px;
+    }
+    
+    .paket-header {
+        padding: 20px;
+    }
+    
+    .paket-header i {
+        font-size: 1.5rem;
+    }
+    
+    .paket-header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .paket-table th,
+    .paket-table td {
+        padding: 12px 15px;
+        font-size: 0.75rem;
+    }
+    
+    .price-cell {
+        font-size: 0.85rem;
+    }
+    
+    .included-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .included-card,
+    .notincluded-card {
+        padding: 25px;
+    }
+    
+    .help-simpel-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+    
+    .help-simpel-content {
+        text-align: center;
+    }
+    
+    .back-home-btn {
+        padding: 10px 25px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .paket-table th,
+    .paket-table td {
+        padding: 8px 10px;
+        font-size: 0.7rem;
+    }
+    
+    .included-card h3,
+    .notincluded-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .included-card li,
+    .notincluded-card li {
+        font-size: 0.8rem;
+    }
+}
+
+/* Tombol Selengkapnya */
+.action-cell {
+    text-align: center;
+    width: 130px;
+}
+
+.btn-detail {
+    display: inline-block;
+    background: linear-gradient(135deg, #2d5a3f, #3a7b54);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.btn-detail:hover {
+    background: #1a4a2a;
+    transform: translateX(3px);
+    box-shadow: 0 3px 10px rgba(45, 90, 63, 0.3);
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.sumatrahappytrack.com/sitemap.xml
+Disallow: /detail%20paket/
