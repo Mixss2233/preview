@@ -518,3 +518,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// ============================================
+// FIX NAVIGATION LINKS ON ALL PAGES
+// ============================================
+
+document.querySelectorAll('.nav-menu a[href*="index.html#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        const currentPage = window.location.pathname.split('/').pop();
+        
+        // Jika sedang tidak di index.html
+        if (currentPage !== 'index.html' && !currentPage.includes('index')) {
+            e.preventDefault();
+            // Simpan target section
+            const targetSection = href.split('#')[1];
+            // Redirect ke index.html dengan parameter
+            window.location.href = `../index.html#${targetSection}`;
+        }
+    });
+});
+
+// Fungsi untuk scroll ke section saat halaman index dimuat dengan hash
+if (window.location.pathname.includes('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/')) {
+    const hash = window.location.hash;
+    if (hash) {
+        setTimeout(() => {
+            const element = document.querySelector(hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 500);
+    }
+}
